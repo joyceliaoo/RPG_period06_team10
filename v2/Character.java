@@ -1,7 +1,5 @@
 public class Character {
-    protected int hp;
-    protected int strength;
-    protected int defense;
+    protected int hp, strength, defense;
     protected double attack;
 
     public boolean isAlive() {
