@@ -26,3 +26,11 @@ class Spider extends Monster {
 	defense = 30;
     }
 }
+
+class Zombie extends Monster {
+
+    public Zombie() {
+	hp = 250;
+	attack = 0.5;
+    }
+}
