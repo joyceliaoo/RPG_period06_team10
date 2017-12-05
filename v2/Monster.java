@@ -17,6 +17,10 @@ class Giant extends Monster {
 	defense = 5;
 	attack = 1.5;
     }
+    
+    public String toString () {
+	 return "Giant HP:" + hp + "Giant strength:" + strength + "Giant defense:" + defense + "Giant attack:" + attack
+    }
 }
 
 class Spider extends Monster {
@@ -25,6 +29,9 @@ class Spider extends Monster {
 	hp = 100;
 	defense = 30;
     }
+    public String toString () {
+	return "Spider HP:" + hp + "Spider defense:" + defense 
+    }
 }
 
 class Zombie extends Monster {
@@ -32,5 +39,8 @@ class Zombie extends Monster {
     public Zombie() {
 	hp = 250;
 	attack = 0.5;
+    }
+    public String toString() {
+	return return "Zombie HP:" + hp  + "Zombie attack:" + attack
     }
 }
