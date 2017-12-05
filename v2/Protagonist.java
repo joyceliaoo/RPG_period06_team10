@@ -28,3 +28,21 @@ public class Protagonist extends Character {
         attack = default_attack;
     }
 }
+class Rogue extends Protagonist {
+    public Rogue() {
+	hp = 75;
+	attack = 2;
+    }
+}
+class Paladin extends Protagonist {
+    public Paladin() {
+	hp = 250;
+	strength = 80;
+    }    
+}
+class Mage extends Protagonist {
+    public Mage() {
+	hp = 80;
+	attack = 5;
+    }
+}
