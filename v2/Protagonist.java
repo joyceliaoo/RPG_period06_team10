@@ -37,16 +37,28 @@ class Rogue extends Protagonist {
 	hp = 75;
 	attack = 2;
     }
+    
+    public String toString() {
+	return super.toString() + System.lineSeparator() + "type: Rogue";
+    }
 }
 class Paladin extends Protagonist {
     public Paladin() {
 	hp = 250;
 	strength = 80;
-    }    
+    }
+    
+    public String toString() {
+	return super.toString() + System.lineSeparator() + "type: Paladin";
+    }
 }
 class Mage extends Protagonist {
     public Mage() {
 	hp = 80;
 	attack = 5;
+    }
+	
+    public String toString() {
+	return super.toString() + System.lineSeparator() + "type: Mage";
     }
 }
