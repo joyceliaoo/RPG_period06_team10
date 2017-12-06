@@ -27,6 +27,10 @@ public class Protagonist extends Character {
     	defense = default_defense;
         attack = default_attack;
     }
+	
+    public String toString() {
+	return super.toString() + System.lineSeparator() + "name: " + name;
+    }
 }
 class Rogue extends Protagonist {
     public Rogue() {
