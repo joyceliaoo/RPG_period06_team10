@@ -29,36 +29,36 @@ public class Protagonist extends Character {
     }
 	
     public String toString() {
-	return super.toString() + System.lineSeparator() + "name: " + name;
+        return super.toString() + System.lineSeparator() + "name: " + name;
     }
 }
 class Rogue extends Protagonist {
-    public Rogue() {
-	hp = 75;
-	attack = 2;
+        public Rogue() {
+    	hp = 75;
+    	attack = 2;
     }
     
     public String toString() {
-	return super.toString() + System.lineSeparator() + "type: Rogue";
+        return super.toString() + System.lineSeparator() + "type: Rogue";
     }
 }
 class Paladin extends Protagonist {
-    public Paladin() {
-	hp = 250;
-	strength = 80;
+        public Paladin() {
+    	hp = 250;
+    	strength = 80;
     }
     
     public String toString() {
-	return super.toString() + System.lineSeparator() + "type: Paladin";
+        return super.toString() + System.lineSeparator() + "type: Paladin";
     }
 }
 class Mage extends Protagonist {
-    public Mage() {
-	hp = 80;
-	attack = 5;
+        public Mage() {
+    	hp = 80;
+    	attack = 5;
     }
 	
     public String toString() {
-	return super.toString() + System.lineSeparator() + "type: Mage";
+        return super.toString() + System.lineSeparator() + "type: Mage";
     }
 }

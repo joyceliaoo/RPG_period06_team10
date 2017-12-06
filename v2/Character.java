@@ -3,10 +3,13 @@ public class Character {
     protected double attack;
 
     public String toString() {
-        return "HP: " + hp 
-            + "\nstrength: " + strength
-            + "\ndefense: " + defense
-            + "\nattack: " + attack;
+        return "HP: " + hp
+            + System.lineSeparator() 
+            + "strength: " + strength
+            + System.lineSeparator()
+            + "defense: " + defense
+            + System.lineSeparator()
+            + "attack: " + attack;
     }
 
 
