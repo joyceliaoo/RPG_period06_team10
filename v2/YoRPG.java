@@ -22,6 +22,7 @@ public class YoRPG
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int type;
 
   private InputStreamReader isr;
   private BufferedReader in;

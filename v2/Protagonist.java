@@ -33,9 +33,10 @@ public class Protagonist extends Character {
     }
 }
 class Rogue extends Protagonist {
-        public Rogue() {
-    	hp = 75;
-    	attack = 2;
+    public Rogue(String name) {
+	super(name);
+	hp = 75;
+    	attack = 0.8;
     }
     
     public String toString() {
@@ -43,7 +44,8 @@ class Rogue extends Protagonist {
     }
 }
 class Paladin extends Protagonist {
-        public Paladin() {
+        public Paladin(String name) {
+	super(name);
     	hp = 250;
     	strength = 80;
     }
@@ -53,9 +55,10 @@ class Paladin extends Protagonist {
     }
 }
 class Mage extends Protagonist {
-        public Mage() {
+        public Mage(String name) {
+	super(name);
     	hp = 80;
-    	attack = 5;
+    	defense = 60;
     }
 	
     public String toString() {
