@@ -112,7 +112,10 @@ public class YoRPG
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+	    double chance = Math.random() * 3.0;
+	    if (chance < 1) smaug = new Giant();
+	    else if (chance < 2) smaug = new Spider();
+	    else smaug = new Zombie();
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
