@@ -64,7 +64,18 @@ public class YoRPG
     try {
 	    difficulty = Integer.parseInt( in.readLine() );
     } catch ( IOException e ) { }
-
+	  
+    s = "Choose your character type: \n";
+    s += "\t1: Rogue\n";
+    s += "\t2: Paladin\n";
+    s += "\t3: Mage\n";
+    s += "Selection: ";
+    System.out.print( s );
+	  
+    try {
+	    type = Integer.parseInt( in.readLine() );
+    } catch ( IOException e ) { }
+	  
     s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
@@ -72,8 +83,14 @@ public class YoRPG
 	    name = in.readLine();
     } catch ( IOException e ) { }
 
-    //instantiate the player's character
-    pat = new Protagonist( name );
+    //instantiate the player's character with different subclasses
+    if (type == 1) {
+	    pat = new Rogue(name);
+    } else if (type == 2) {
+	    pat = new Paladin(name);
+    } else {
+	    pat = new Mage(name);
+    }
 
   }//end newGame()
 
