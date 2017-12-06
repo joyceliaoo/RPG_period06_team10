@@ -1,8 +1,8 @@
 public class Protagonist extends Character {
     private String name;
 
-    private double default_attack = 0.4;
-    private int default_defense = 40;
+    protected double default_attack = 0.4;
+    protected int default_defense = 40;
 
 
     //initializes all attributes to parenthesized example numbers
@@ -36,7 +36,7 @@ class Rogue extends Protagonist {
     public Rogue(String name) {
 	super(name);
 	hp = 75;
-    	attack = 0.8;
+    	default_attack = attack = 0.8;
     }
     
     public String toString() {
@@ -58,7 +58,7 @@ class Mage extends Protagonist {
         public Mage(String name) {
 	super(name);
     	hp = 80;
-    	defense = 60;
+    	default_defense = defense = 60;
     }
 	
     public String toString() {
