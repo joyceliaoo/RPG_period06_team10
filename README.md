@@ -1,4 +1,4 @@
-# RPG_06_10
+# RPG_period06_team10
 
 ## Classes
 There are two different types of Characters:
@@ -9,9 +9,9 @@ There are two different types of Characters:
 	3. Mage: low hp, high attack
 - Monster
  The user encounters Monsters with different frequencies, depending on the level of difficulty they have selected at the beginning of the game. 
-	1. Giant 
-	2. Spiders
-	3. Zombies
+	1. Giant: high hp, high strength, low defense
+	2. Spiders: low hp, high defense
+	3. Zombies: high hp, low attack damage
 
 
 

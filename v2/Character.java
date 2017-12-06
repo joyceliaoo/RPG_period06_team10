@@ -2,6 +2,14 @@ public class Character {
     protected int hp, strength, defense;
     protected double attack;
 
+    public String toString() {
+        return "HP: " + hp 
+            + "\nstrength: " + strength
+            + "\ndefense: " + defense
+            + "\nattack: " + attack;
+    }
+
+
     public boolean isAlive() {
         return hp > 0;
     }
