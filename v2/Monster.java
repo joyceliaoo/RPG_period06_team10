@@ -19,7 +19,7 @@ class Giant extends Monster {
     }
     
     public String toString () {
-	 return super.toString() + System.lineSeparator() + "type: Giant";
+		return super.toString() + System.lineSeparator() + "type: Giant";
     }
 }
 
@@ -48,10 +48,3 @@ class Zombie extends Monster {
 		return super.toString() + System.lineSeparator() + "type: Zombie";
 	}
 }
-
-
-
-
-
-
-
