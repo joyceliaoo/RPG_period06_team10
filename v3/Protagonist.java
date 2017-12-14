@@ -103,11 +103,12 @@ class Mage extends Protagonist {
         return  this.basicInfo()
                 + System.lineSeparator() 
                 + "type: Mage";
-            }
+            }			
 	
     public void specialize() {
 	defense -= 15;
 	attack += 0.15
+    }
 
     public void normalize() {
         defense = 60;
