@@ -15,8 +15,6 @@ public abstract class Protagonist extends Character {
 
     private String name;
 
-    protected double default_attack = 0.4;
-    protected int default_defense = 40;
 
 
     //initializes all attributes to parenthesized example numbers
@@ -37,9 +35,13 @@ public abstract class Protagonist extends Character {
         attack += 0.1;
     }
 
-    public void normalize() {
-    	defense = default_defense;
-        attack = default_attack;
+    public abstract void normalize();
+
+    public String basicInfo() {
+         return "name: " + name
+                + System.lineSeparator()
+                + super.toString();
+
     }
 	
     public abstract String toString() ;
@@ -50,47 +52,58 @@ class Rogue extends Protagonist {
     public Rogue(String name) {
     	super(name);
     	hp = 75;
-        default_attack = attack = 0.8;
+        attack = 0.8;
     }
     
     public String toString() {
-        return  "name: " + getName() 
+        return  this.basicInfo()
                 + System.lineSeparator() 
-                + "type: Rogue"
-                + System.lineSeparator()
-                + "HP: " + hp
-                + System.lineSeparator() 
-                + "strength: " + strength
-                + System.lineSeparator()
-                + "defense: " + defense
-                + System.lineSeparator()
-                + "attack: " + attack;
+                + "type: Rogue";
+    }
+
+    public void normalize() {
+        defense = 40;
+        attack = 0.8;
     }
 }
 
-// class Paladin extends Protagonist {
-//         public Paladin(String name) {
-// 	super(name);
-//     	hp = 250;
-//     	strength = 80;
-//     }
+class Paladin extends Protagonist {
+    public Paladin(String name) {
+	   super(name);
+    	hp = 250;
+    	strength = 80;
+    }
     
-//     // public String toString() {
-//     //     return super.toString() + System.lineSeparator() + "type: Paladin";
-//     // }
-// }
+    public String toString() {
+        return  this.basicInfo()
+                + System.lineSeparator() 
+                + "type: Paladin";
+            }
 
-// class Mage extends Protagonist {
-//         public Mage(String name) {
-// 	super(name);
-//     	hp = 80;
-//     	default_defense = defense = 60;
-//     }
+    public void normalize() {
+        defense = 40;
+        attack = 0.4;
+    }
+        }
+
+class Mage extends Protagonist {
+    public Mage(String name) {
+    	super(name);
+        hp = 80;
+        defense = 60;
+    }
 	
-//     // public String toString() {
-//     //     return super.toString() + System.lineSeparator() + "type: Mage";
-//     // }
-// }
+    public String toString() {
+        return  this.basicInfo()
+                + System.lineSeparator() 
+                + "type: Mage";
+            }
+
+    public void normalize() {
+        defense = 60;
+        attack = 0.4;
+    }
+        }
 
 
 
