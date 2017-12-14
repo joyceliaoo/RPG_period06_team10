@@ -30,11 +30,7 @@ public abstract class Protagonist extends Character {
 	   return name;
     }
     
-    public void specialize() {
-    	defense -= 10;
-        attack += 0.1;
-    }
-
+    public abstract void specialize();
     public abstract void normalize();
 
     public String basicInfo() {
@@ -60,7 +56,12 @@ class Rogue extends Protagonist {
                 + System.lineSeparator() 
                 + "type: Rogue";
     }
-
+	
+    public void specialize() {
+	defense -= 10;
+	attack += 0.2;
+    }
+	
     public void normalize() {
         defense = 40;
         attack = 0.8;
@@ -79,6 +80,11 @@ class Paladin extends Protagonist {
                 + System.lineSeparator() 
                 + "type: Paladin";
             }
+	
+    public void specialize() {
+	defense -= 10;
+	attack += 0.1;
+    }
 
     public void normalize() {
         defense = 40;
@@ -98,6 +104,10 @@ class Mage extends Protagonist {
                 + System.lineSeparator() 
                 + "type: Mage";
             }
+	
+    public void specialize() {
+	defense -= 15;
+	attack += 0.15
 
     public void normalize() {
         defense = 60;
